@@ -32,5 +32,3 @@ def attempts(old_func):
 				error = err
 		raise error
 	return new_func
-
-def attempts_2(attempts, timeout):
