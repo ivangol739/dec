@@ -4,14 +4,15 @@ import time
 import json
 from pprint import pprint
 from fake_headers import Headers
-
+from logger2 import logger
 
 headers = Headers(browser='chrome', os='windows').generate()
 url = 'https://habr.com/ru/articles'
-KEYWORDS = ['дизайн', 'фото', 'web', 'python', 'IT-компании', 'Зарабатывать', 'Glarus']
+KEYWORDS = ['дизайн', 'программирование', 'web', 'python', 'IT-компании', 'Зарабатывать', 'Искусственный интелект']
 KEYWORDS = set(map(str.lower, KEYWORDS))
+log_path = "app.log"
 
-
+@logger(log_path)
 def fetch_articles(url, headers):
 	try:
 		response = requests.get(url, headers=headers)
@@ -21,7 +22,7 @@ def fetch_articles(url, headers):
 		print(f"Error fetching articlesL {e}")
 		return None
 
-
+@logger(log_path)
 def parse_articles(soup):
 	articles = soup.find_all('article', class_='tm-articles-list__item')
 	parsed_data = []

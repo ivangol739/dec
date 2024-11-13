@@ -1,0 +1,3 @@
+2024-11-13 22:15:58 функция get_the_smartest_superhero. Аргументы: args: ([1, 2, 3],), kwargs: {}. Результат: Abe Sapien 
+2024-11-13 22:16:26 функция get_the_smartest_superhero. Аргументы: args: ([1, 2, 3, 4, 5],), kwargs: {}. Результат: Abe Sapien 
+2024-11-13 22:17:16 функция get_the_smartest_superhero. Аргументы: args: ([10, 11, 13],), kwargs: {}. Ошибка: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None)) 
